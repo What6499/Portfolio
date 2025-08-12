@@ -8,8 +8,10 @@ function App() {
     <>
       <Navbar></Navbar>
       <Banner></Banner>
-      <Navigation></Navigation>
-      <Outlet></Outlet>
+      <div className="min-h-screen">
+        <Navigation></Navigation>
+        <Outlet></Outlet>
+      </div>
     </>
   );
 }
