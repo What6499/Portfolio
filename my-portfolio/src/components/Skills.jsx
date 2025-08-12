@@ -23,42 +23,38 @@ const skills = [
   { name: "CSS3", icon: Palette },
   { name: "MongoDB", icon: Database },
 ];
-
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.1,
+      staggerChildren: 0.06,
+      delayChildren: 0.05,
     },
   },
 };
-
 const itemVariants = {
   hidden: {
     opacity: 0,
-    y: 30,
-    scale: 0.9,
+    y: 20,
     rotateX: -10,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     rotateX: 0,
+
     transition: {
       type: "spring",
-      stiffness: 300,
-      damping: 25,
-      duration: 0.6,
+      stiffness: 400,
+      damping: 20,
+      duration: 0.3,
     },
   },
 };
-
 const Skills = () => {
   return (
-    <section className="max-w-7xl mx-auto p-6">
+    <section className="container mx-auto p-6">
       <h2 className="text-5xl font-bold text-[#1B1B1B] mb-6 text-center">
         Skills
       </h2>
@@ -75,12 +71,11 @@ const Skills = () => {
         className="w-[90%] origin-left h-px bg-gray-900/30 mx-auto mb-8"
       ></motion.div>
 
-      <div
+      <motion.div
+        variants={containerVariants}
         initial="hidden"
         animate="visible"
-        variants={containerVariants}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-        style={{ perspective: "1000px" }}
       >
         {skills.map((skill, index) => {
           const Icon = skill.icon;
@@ -93,16 +88,9 @@ const Skills = () => {
                 scale: 1.08,
                 rotateY: 3,
                 z: 10,
-                transition: {
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                },
+                transition: { type: "spring", stiffness: 400, damping: 17 },
               }}
               whileTap={{ scale: 0.95 }}
-              initial="hidden"
-              animate="visible"
-              custom={index}
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-600 via-gray-800 to-black opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-300 rounded-lg"></div>
 
@@ -129,7 +117,7 @@ const Skills = () => {
             </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 };

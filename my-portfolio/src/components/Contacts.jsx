@@ -26,7 +26,7 @@ const Contacts = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto p-6">
+    <section className="container mx-auto p-6">
       <h2 className="text-center text-5xl font-bold mb-6 text-[#1B1B1B] ">
         Contact Me
       </h2>
@@ -46,7 +46,7 @@ const Contacts = () => {
         {/* Contact Information */}
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-[#1B1B1B]">
+            <h3 className="text-xl font-semibold text-center mb-4 text-[#1B1B1B]">
               Get In Touch
             </h3>
             <p className="text-gray-600 mb-6">
@@ -56,7 +56,7 @@ const Contacts = () => {
           </div>
 
           <div className="space-y-4">
-            <div className="flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:shadow-md transition-all duration-200 group">
+            <div className="flex items-center space-x-4 bg-white/40 p-4 rounded-lg border border-gray-200 hover:shadow-md transition-all duration-200 group">
               <div className="flex-shrink-0 w-12 h-12 bg-[#1B1B1B] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                 <Mail size={20} className="text-white" />
               </div>
@@ -73,7 +73,7 @@ const Contacts = () => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:shadow-md transition-all duration-200 group">
+            <div className="flex items-center space-x-4 p-4 bg-white/40  rounded-lg border border-gray-200 hover:shadow-md transition-all duration-200 group">
               <div className="flex-shrink-0 w-12 h-12 bg-[#1B1B1B] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                 <Phone size={20} className="text-white" />
               </div>
@@ -89,31 +89,12 @@ const Contacts = () => {
                 </a>
               </div>
             </div>
-
-            <div className="flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:shadow-md transition-all duration-200 group">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#1B1B1B] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <MessageCircle size={20} className="text-white" />
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">
-                  WhatsApp
-                </p>
-                <a
-                  href="https://wa.me/1234567890"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#1B1B1B] hover:text-gray-600 transition-colors duration-200 font-medium"
-                >
-                  +1 234 567 890
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* Contact Form */}
         <div className=" rounded-lg   ">
-          <h3 className="text-xl font-semibold mb-6 text-[#1B1B1B]">
+          <h3 className="text-xl text-center font-semibold mb-6 text-[#1B1B1B]">
             Send Message
           </h3>
 
@@ -143,7 +124,7 @@ const Contacts = () => {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B1B1B] focus:border-transparent transition-all duration-200"
+                  className="w-full pl-10 pr-4 py-3 border bg-white/40  border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B1B1B] focus:border-transparent transition-all duration-200"
                 />
               </div>
             </div>
@@ -163,7 +144,7 @@ const Contacts = () => {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="your.email@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B1B1B] focus:border-transparent transition-all duration-200"
+                  className="w-full pl-10 pr-4 py-3 border bg-white/40  border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B1B1B] focus:border-transparent transition-all duration-200"
                 />
               </div>
             </div>
@@ -183,7 +164,7 @@ const Contacts = () => {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Write your message here..."
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B1B1B] focus:border-transparent transition-all duration-200 resize-none"
+                  className="w-full pl-10 pr-4 py-3 border bg-white/40  border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B1B1B] focus:border-transparent transition-all duration-200 resize-none"
                 />
               </div>
             </div>
