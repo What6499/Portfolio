@@ -26,7 +26,7 @@ const Contacts = () => {
   };
 
   return (
-    <section className="container mx-auto p-6">
+    <section className="container mx-auto px-4 py-6">
       <h2 className="text-center text-5xl font-bold mb-6 text-[#1B1B1B] ">
         Contact Me
       </h2>

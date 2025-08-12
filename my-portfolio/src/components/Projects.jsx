@@ -14,7 +14,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="container mx-auto p-6 rounded-lg">
+    <section className="container mx-auto md:py-6 px-4 py-6 rounded-lg">
       {/* Header Section */}
       <h2 className="text-5xl text-center font-bold mb-6 text-[#1B1B1B]">
         Projects

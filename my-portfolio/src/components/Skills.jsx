@@ -54,7 +54,7 @@ const itemVariants = {
 };
 const Skills = () => {
   return (
-    <section className="container mx-auto p-6">
+    <section className="container mx-auto px-4 py-6">
       <h2 className="text-5xl font-bold text-[#1B1B1B] mb-6 text-center">
         Skills
       </h2>

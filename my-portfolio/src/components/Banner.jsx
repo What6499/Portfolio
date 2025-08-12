@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <section className="flex flex-col-reverse lg:flex-row h-[calc(100vh-150px)] items-center container mx-auto p-6 md:p-12">
+    <section className="flex mt-6 lg:mt-0 flex-col-reverse lg:flex-row h-[calc(100vh-150px)] items-center container mx-auto px-4 py-6 md:py-12">
       {/* Left Text Content */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -35,12 +35,12 @@ const Banner = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-        className="flex-[.4] w-full max-w-xs md:max-w-md"
+        className="flex-[0.4] w-full  max-w-xs md:max-w-md"
       >
         <img
           src="https://i.postimg.cc/dQgDz6SD/me.jpg"
           alt="Your portrait"
-          className="rounded-lg object-contain w-full h-auto max-h-[250px] lg:max-h-[450px]"
+          className="rounded-lg  object-contain w-full h-auto max-h-[250px] lg:max-h-[450px]"
         />
       </motion.div>
     </section>

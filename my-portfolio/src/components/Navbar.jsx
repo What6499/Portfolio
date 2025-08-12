@@ -86,10 +86,10 @@ const Navbar = () => {
               {navigation}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">My Portfolio</a>
+          <a className="btn btn-ghost text-3xl">Jamil Ahmed</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu  space-x-4 menu-horizontal px-1">{navigation}</ul>
+          <ul className="menu  space-x-4 menu-horizontal px-4">{navigation}</ul>
         </div>
         <div className="navbar-end">
           <a className="btn">Resume</a>
