@@ -1,23 +1,35 @@
 [
   {
-    "id": "portfolio-website",
-    "name": "Portfolio Website",
-    "image": "https://via.placeholder.com/400x250?text=Portfolio+Website",
-    "description": "A modern responsive portfolio showcasing creative work and skills",
-    "tech": ["React", "Tailwind", "Framer Motion"]
+    "id": "1",
+    "name": "Live Mate",
+    "image": "https://i.postimg.cc/CxCRQCs3/Screenshot-13-Aug-02-14-40-16123.png",
+    "briefDescription": "Live Mate helps you find compatible roommates quickly with easy search filters and secure messaging. It's designed to simplify your roommate hunt with a clean and reliable interface.",
+    "challenge": "Designing the structure was a challenging task as I was still kinda new to Programming.",
+    "futurePlan": "I'll be implementing payments here with Stripe and also try to improve the color theme.",
+    "tech": ["React", "Tailwind", "Framer Motion"],
+    "liveLink": "https://live-mate.web.app/",
+    "githubClient": "https://github.com/What6499/Live-Mate"
   },
   {
-    "id": "task-manager-app",
-    "name": "Task Manager App",
-    "image": "https://via.placeholder.com/400x250?text=Task+Manager+App",
-    "description": "Full-featured task management with real-time collaboration",
-    "tech": ["React", "Node.js", "MongoDB"]
+    "id": "2",
+    "name": "Bengal Wander",
+    "image": "https://i.postimg.cc/s2VMdBnv/Screenshot-13-Aug-02-11-13-13508.png",
+    "briefDescription": "Bengal Wander offers an easy way to explore and book travel packages with detailed info and smooth booking. It's built to make travel planning simple and enjoyable.",
+    "challenge": "Adding payments option with Stripe was really testing my patience.",
+    "futurePlan": "Adding better dark mode compatibility and more payment options with better UI.",
+    "tech": ["React", "Node.js", "MongoDB"],
+    "liveLink": "https://bengal-wander.web.app/",
+    "githubClient": "https://github.com/What6499/Bengal-Wander-Client"
   },
   {
-    "id": "ecommerce-store",
-    "name": "E-commerce Store",
-    "image": "https://via.placeholder.com/400x250?text=E-commerce+Store",
-    "description": "Complete e-commerce solution with payment integration",
-    "tech": ["Next.js", "Stripe", "PostgreSQL"]
+    "id": "3",
+    "name": "Study Sphere",
+    "image": "https://i.postimg.cc/CxCRQCs3/Screenshot-13-Aug-02-14-40-16123.png",
+    "briefDescription": "Study Sphere lets you create, share, and submit assignments with friends to support collaborative learning. It's designed for easy study and better academic progress.",
+    "challenge": "Implementing Dark Mode here properly was tough. Previously I was going with whatever daisyUI had as the defaults. But, on this one I really tried to implement a proper dark mode theme",
+    "futurePlan": "Rebuilding this in Next.js for better SEO.",
+    "tech": ["Next.js", "Stripe", "PostgreSQL"],
+    "liveLink": "https://study-sphere-abf36.web.app/",
+    "githubClient": "https://github.com/What6499/Study-Sphere-Client"
   }
 ]

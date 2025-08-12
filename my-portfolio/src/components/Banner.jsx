@@ -22,7 +22,8 @@ const Banner = () => {
         <p className="text-base text-center lg:text-left sm:text-lg text-black/70 font-semibold leading-relaxed">
           One of my wishes is to visit Switzerland at least once — the scenery
           there looks amazing. I like taking on challenges, especially those
-          that make me think differently or find creative solutions.
+          that make me think differently or find creative solutions. Apart from
+          coding, I like playing games on my computer.
         </p>
       </motion.div>
 

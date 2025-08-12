@@ -2,25 +2,27 @@ import { createBrowserRouter } from "react-router";
 import App from "../App";
 import Skills from "../components/Skills";
 import Contacts from "../components/Contacts";
-import Projects from "../components/Projects"
+import Projects from "../components/Projects";
+import ProjectDetails from "../components/ProjectDetails";
+import Home from "../components/Home";
 const router = createBrowserRouter([
   {
     path: "/",
     Component: App,
     children: [
       {
-        path: "skills",
-        Component: Skills,
+        index: true,
+        Component: Home,
       },
       {
-        path: "contacts",
-        Component: Contacts,
+        path: `projects/:id`,
+        Component: ProjectDetails,
       },
-      {
-        path:'projects',
-        Component:Projects
-      }
     ],
+  },
+  {
+    path: `projects/:id`,
+    Component: ProjectDetails,
   },
 ]);
 export default router;

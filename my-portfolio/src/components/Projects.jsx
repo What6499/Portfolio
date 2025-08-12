@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion"; // make sure to import from "framer-motion"
+import { motion } from "motion/react"; // make sure to import from "framer-motion"
 import { Eye, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -30,24 +31,24 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className="group relative overflow-hidden rounded-xl"
+            className="group relative overflow-hidden rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.3 }}
           >
-            <div className="bg-white/40  rounded-2xl shadow-md border border-[#e3d6b5] overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+            <div className="bg-white/40  rounded-lg shadow-md border border-[#e3d6b5] overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
               {/* Image Container */}
-              <div className="relative overflow-hidden rounded-t-2xl">
+              <div className="relative overflow-hidden ">
                 <img
                   src={project.image}
                   alt={project.name}
                   className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1B1B1B]/20 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300 rounded-t-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1B1B1B]/20 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300 "></div>
 
                 {/* View Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <div className="bg-[#1B1B1B]/90 rounded-full p-3 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                  <div className="bg-[#1B1B1B]/90 rounded-2xl  p-3 transform scale-75 group-hover:scale-100 transition-transform duration-300">
                     <Eye size={24} className="text-[#FFF8E7]" />
                   </div>
                 </div>
@@ -59,35 +60,16 @@ const Projects = () => {
                   {project.name}
                 </h3>
 
-                <p className="text-[#5a5a5a] mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-[#e3d6b5] text-[#1B1B1B] text-sm font-medium rounded-full border border-[#d1c1a6]"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
                 {/* Action Button */}
-                <button
-                  onClick={() => {
-                    console.log(`Navigate to /projects/${project.id}`);
-                  }}
-                  className="w-full bg-[#1B1B1B] text-[#FFF8E7] py-3 px-6 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-[#3d3d3d] transition-all duration-300 transform group-hover:scale-[1.02] shadow-md hover:shadow-lg"
-                >
-                  <span>View Details</span>
-                  <ArrowRight
-                    size={18}
-                    className="transform group-hover:translate-x-1 transition-transform duration-300"
-                  />
-                </button>
+                <Link to={`/projects/${project.id}`}>
+                  <button className="w-full bg-[#1B1B1B] text-[#FFF8E7] py-3 px-6 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-[#3d3d3d] transition-all  duration-300 transform group-hover:scale-[1.02] shadow-md hover:shadow-lg">
+                    <span>View Details</span>
+                    <ArrowRight
+                      size={18}
+                      className="transform group-hover:translate-x-1 transition-transform duration-300"
+                    />
+                  </button>
+                </Link>
               </div>
 
               {/* Decorative Elements */}

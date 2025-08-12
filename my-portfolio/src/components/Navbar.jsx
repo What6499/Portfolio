@@ -1,29 +1,30 @@
 import React from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 
 const Navbar = () => {
+  const location = useLocation();
   const navigation = (
     <>
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive
+          className={() =>
+            location.hash === ""
               ? "bg-white text-black px-3 py-2 rounded-md font-semibold"
-              : " px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
+              : "px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
           }
         >
-          Home
+          home
         </NavLink>
       </li>
 
       <li>
         <NavLink
-          to="/skills"
-          className={({ isActive }) =>
-            isActive
+          to="/#skills"
+          className={() =>
+            location.hash === "#skills"
               ? "bg-white text-black px-3 py-2 rounded-md font-semibold"
-              : " px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
+              : "px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
           }
         >
           Skills
@@ -32,11 +33,11 @@ const Navbar = () => {
 
       <li>
         <NavLink
-          to="/projects"
-          className={({ isActive }) =>
-            isActive
+          to="/#projects"
+          className={() =>
+            location.hash === "#projects"
               ? "bg-white text-black px-3 py-2 rounded-md font-semibold"
-              : " px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
+              : "px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
           }
         >
           Projects
@@ -45,11 +46,11 @@ const Navbar = () => {
 
       <li>
         <NavLink
-          to="/contacts"
-          className={({ isActive }) =>
-            isActive
+          to="/#contacts"
+          className={() =>
+            location.hash === "#contacts"
               ? "bg-white text-black px-3 py-2 rounded-md font-semibold"
-              : " px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
+              : "px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"
           }
         >
           Contacts
@@ -80,7 +81,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu hover:bg-white text-white menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52"
+              className="menu  bg-[#1B1B1B] text-white menu-sm dropdown-content mt-3 z-[1] p-2   rounded-box w-52"
             >
               {navigation}
             </ul>
