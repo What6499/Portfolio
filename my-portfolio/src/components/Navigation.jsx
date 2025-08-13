@@ -42,7 +42,8 @@ const Navigation = () => {
       if (!navEl) return;
       const rect = navEl.getBoundingClientRect();
       if (Math.abs(rect.top) < 200) return;
-      navEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      const top = navEl.getBoundingClientRect().top + window.pageYOffset - 64;
+      window.scrollTo({ top, behavior: "smooth" });
     }, 50);
   };
 
@@ -50,7 +51,7 @@ const Navigation = () => {
     <>
       <nav
         id="navigation"
-        className=" relative flex pt-8 items-center justify-center space-x-4 text-[#1B1B1B] font-semibold text-lg"
+        className=" relative pt-6 flex  items-center justify-center space-x-4 text-[#1B1B1B] font-semibold text-lg"
       >
         {!selected && (
           <div className="absolute -top-8 left-1/2 -translate-x-1/2  text-black px-3 py-1 rounded  text-sm animate-bounce">

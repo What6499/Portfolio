@@ -8,7 +8,9 @@ import Contacts from "./Contacts";
 const Home = () => {
   return (
     <>
-      <Banner></Banner>
+      <main className="">
+        <Banner></Banner>
+      </main>
 
       <Navigation></Navigation>
     </>

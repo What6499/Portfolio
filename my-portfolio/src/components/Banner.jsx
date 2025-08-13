@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <section className="flex mt-6 lg:mt-0 flex-col-reverse lg:flex-row h-[calc(100vh-150px)] items-center container mx-auto px-4 py-6 md:py-12">
+    <section className="flex pt-16 mt-6 lg:mt-0 flex-col-reverse lg:flex-row min-h-[calc(100vh-80px)] items-center container mx-auto px-4 py-6 md:py-16">
       {/* Left Text Content */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="flex-1  text-[#1B1B1B]/80  lg:mt-0"
+        className="flex-1  text-[#1B1B1B]/80  "
       >
         <h1 className="text-3xl sm:text-4xl font-semibold mb-4 text-center lg:text-left">
           About Me

@@ -26,7 +26,10 @@ const ProjectDetails = () => {
     fetchProject();
   }, [id]);
 
-  if (!project) return <div>Loading or project not found...</div>;
+  if (!project)
+    return (
+      <span className="loading mx-auto flex mt-8 loading-bars loading-xl"></span>
+    );
 
   return (
     <div className="py-4">
