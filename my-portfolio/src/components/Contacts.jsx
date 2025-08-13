@@ -68,7 +68,7 @@ const Contacts = () => {
                   href="mailto:your.email@example.com"
                   className="text-[#1B1B1B] hover:text-gray-600 transition-colors duration-200 font-medium"
                 >
-                  your.email@example.com
+                  what6499@gmail.com
                 </a>
               </div>
             </div>
@@ -81,12 +81,9 @@ const Contacts = () => {
                 <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">
                   Phone
                 </p>
-                <a
-                  href="tel:+1234567890"
-                  className="text-[#1B1B1B] hover:text-gray-600 transition-colors duration-200 font-medium"
-                >
-                  +1 234 567 890
-                </a>
+                <div className="text-[#1B1B1B] hover:text-gray-600 transition-colors duration-200 font-medium">
+                  +8801818866580
+                </div>
               </div>
             </div>
           </div>
